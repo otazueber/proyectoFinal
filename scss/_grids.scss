@@ -17,6 +17,7 @@ $rotate: 360deg;
 }
 
 @media screen and (min-width: $minWidth) {
+
     // menu desktop
     .ulVinos {
         display: flex;
@@ -33,10 +34,12 @@ $rotate: 360deg;
 }
 
 @media screen and (max-width: $maxWidth) {
+
     // menu mobile
     .ulVinos li {
         list-style-type: none;
     }
+
     .ulVinos li a {
         text-decoration: none;
         color: white;

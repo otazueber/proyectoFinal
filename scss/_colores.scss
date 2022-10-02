@@ -1,14 +1,14 @@
-$colores:(
+$colores: (
 	colorFondo:black,
 	colorFuente:white,
 );
 
-.bground{
-	background-color:map-get($colores, colorFondo);
-} 
+.bground {
+	background-color: map-get($colores, colorFondo);
+}
 
 .font {
-	color:  map-get($colores, colorFuente);
+	color: map-get($colores, colorFuente);
 }
 
 a {
