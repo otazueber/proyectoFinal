@@ -1,0 +1,16 @@
+$colores:(
+	colorFondo:black,
+	colorFuente:white,
+);
+
+.bground{
+	background-color:map-get($colores, colorFondo);
+} 
+
+.font {
+	color:  map-get($colores, colorFuente);
+}
+
+a {
+	color: map-get($colores, colorFuente);
+}

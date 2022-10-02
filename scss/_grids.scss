@@ -1,0 +1,285 @@
+$maxWidth: 768px;
+$minWidth: 769px;
+$rotate: 360deg;
+
+.bground {
+    background-color: black;
+}
+
+.fontColor {
+    font-family: Assistant;
+    color: white;
+}
+
+.logoVinos {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: $minWidth) {
+    // menu desktop
+    .ulVinos {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .ulVinos li a {
+        text-decoration: none;
+        color: white;
+        font-weight: normal;
+        padding-left: 8px;
+    }
+}
+
+@media screen and (max-width: $maxWidth) {
+    // menu mobile
+    .ulVinos li {
+        list-style-type: none;
+    }
+    .ulVinos li a {
+        text-decoration: none;
+        color: white;
+        font-weight: normal;
+    }
+}
+
+.tituloVinos {
+    font-family: Assistant;
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 60px;
+}
+
+/* GRID PARA EL HTML VINOS */
+.gridTodos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+}
+
+.gridMainProductos div p {
+    font-size: 20px;
+}
+
+.header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+main {
+    grid-area: main;
+    border-bottom-width: 100px;
+    border-bottom-color: white;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+/* GRID PARA EL MAIN DE VINOS */
+.gridMainProductos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "productoF1C1 productoF1C2 productoF1C3 productoF1C4"
+        "productoF2C1 productoF2C2 productoF2C3 productoF2C4"
+        "productoF3C1 productoF3C2 productoF3C3 productoF3C4";
+}
+
+.tituloVinos {
+    grid-area: titulo;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.productoF1C1 {
+    grid-area: productoF1C1;
+}
+
+.productoF1C2 {
+    grid-area: productoF1C2;
+}
+
+.productoF1C3 {
+    grid-area: productoF1C3;
+}
+
+.productoF1C4 {
+    grid-area: productoF1C4;
+}
+
+.productoF2C1 {
+    grid-area: productoF2C1;
+}
+
+.productoF2C2 {
+    grid-area: productoF2C2;
+}
+
+.productoF2C3 {
+    grid-area: productoF2C3;
+}
+
+.productoF2C4 {
+    grid-area: productoF2C4;
+}
+
+.productoF3C1 {
+    grid-area: productoF3C1;
+}
+
+.gridMainProductos div {
+    padding-left: 50px;
+}
+
+.productoVino {
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+// animaciones, solo para desktop
+@media screen and (min-width: $minWidth) {
+
+    // animación de rotación para el logo
+    .rotar {
+        transition: all 1s;
+    }
+
+    .rotar:hover {
+        transform: rotate($rotate);
+        transition: rotate($rotate) 1s;
+    }
+
+    .productoVino {
+        transition: all;
+    }
+
+    .productoVino:hover {
+        width: 55%;
+        margin-bottom: 0%;
+        transition: width 0s;
+    }
+
+    .ulVinos li a:hover {
+        color: blue;
+        background-color: transparent;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: $maxWidth) {
+
+    /* GRID PARA EL HEADER */
+    .header {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "logo"
+            "nav";
+    }
+
+    .logo {
+        grid-area: logo;
+        justify-content: space-around;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        //justify-content: space-around;
+        width: 100%;
+    }
+
+    .ulVinos li a {
+        list-style-type: square;
+    }
+
+    /* GRID PARA EL MAIN DE VINOS */
+    .gridMainProductos {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "titulo"
+            "productoF1C1"
+            "productoF1C2"
+            "productoF1C3"
+            "productoF1C4"
+            "productoF2C1"
+            "productoF2C2"
+            "productoF2C3"
+            "productoF2C4"
+            "productoF3C1";
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .titulo {
+        grid-area: titulo;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .productoF1C1 {
+        grid-area: productoF1C1;
+    }
+
+    .productoF1C2 {
+        grid-area: productoF1C2;
+    }
+
+    .productoF1C3 {
+        grid-area: productoF1C3;
+    }
+
+    .productoF1C4 {
+        grid-area: productoF1C4;
+    }
+
+    .productoF2C1 {
+        grid-area: productoF2C1;
+    }
+
+    .productoF2C2 {
+        grid-area: productoF2C2;
+    }
+
+    .productoF2C3 {
+        grid-area: productoF2C3;
+    }
+
+    .productoF2C4 {
+        grid-area: productoF2C4;
+    }
+
+    .productoF3C1 {
+        grid-area: productoF3C1;
+    }
+
+    .gridMainProductos div img {
+        width: 100%;
+    }
+
+    .gridMainProductos div p {
+        padding-left: 25px;
+    }
+
+    footer {
+        display: grid;
+        justify-content: center;
+    }
+
+}

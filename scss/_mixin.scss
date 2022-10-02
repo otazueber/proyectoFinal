@@ -1,0 +1,9 @@
+@mixin colorYbackground($color,$background,$fSize){
+	color:$color;
+	background-color:$background;
+	font-size:$fSize;
+}
+
+div{
+	@include colorYbackground(white, black, 20px);
+}
